@@ -1,0 +1,79 @@
+package jh0427;
+
+import java.util.Scanner;
+
+public class JUN0427 {
+
+	public static void main(String[] args) {
+	
+	//두 수의 사칙연산 계산기 프로그램
+	//메뉴(1.계산기 실행, 2.종료)
+	//숫자 입력받고
+	//무슨계산할지 선택해(1,2,3,4)
+	//계산 하고 계산 출력하고
+	//메뉴로 돌아가기
+
+     Scanner sc = new Scanner(System.in);
+	while(true) {
+		System.out.println("----------------------");
+		System.out.println("계산기 프로그램입니다.");
+		System.out.println("계산기 실행(1)  종료(2)");
+		int 초이스 = sc.nextInt();
+		System.out.println("----------------------");
+		System.out.println();
+	
+		if(초이스==1) {
+			// 계산기 실행
+		System.out.println("계산기를 실행합니다.");
+	
+		//두 수를  입력하기
+		System.out.print("num1 입력해봐");
+		int num1 = sc.nextInt();
+		System.out.print("num2 입력해봐");
+		int num2 = sc.nextInt();
+		System.out.print(" + , - , * , / ");
+		
+		String op = sc.next();
+		
+		switch (op) {
+		case "+":
+			System.out.println("결과는"+(num1+num2));
+			
+			break;
+		case "-":
+			System.out.println("결과는"+(num1-num2));
+			
+			break;
+		case "*":
+			System.out.println("결과는"+(num1*num2));
+			
+			break;
+		case "/":
+			System.out.println("결과는"+((float)num1/num2));
+			break;
+		default:
+			System.out.println("꺼져");
+			continue;
+		}
+		
+		
+		
+		
+		} else if(초이스==2) {
+		    // 종료함
+	    System.out.println("계산기 프로그램을 종료합니다.");
+		break;
+		} else {
+			System.out.println("just (1) or (2)");
+		}
+		
+	}
+	 
+	 
+	 
+	 
+	 
+	 
+	}
+
+}
