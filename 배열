@@ -1,0 +1,30 @@
+package kjh0502;
+
+import java.util.Scanner;
+
+public class Array {
+
+	public static void main(String[] args) {
+		
+		
+//		int[] 배열 = new int[100];
+//		int 배열2[] = new int[100];
+	
+		int[] 배열 = new int[5];
+		int a = 0;
+		Scanner sc = new Scanner(System.in);
+	
+	while(a<5) {
+		System.out.println("값을 입력하세요!");
+		배열[a] = sc.nextInt();
+		a++;
+	}
+	
+	for(int b = 0; b<5; b++) {
+		System.out.println(배열[b]);
+	}
+	
+	
+	}
+
+}
