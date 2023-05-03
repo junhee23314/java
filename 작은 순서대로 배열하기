@@ -1,0 +1,62 @@
+package kjh0503;
+
+import java.util.Scanner;
+
+public class SelectionSort {
+
+	public static void main(String[] args) {
+		// 배열의 크기
+       Scanner sc = new Scanner(System.in);
+	  
+       System.out.println("배열의 크기는?");
+	   int 배열크기 = sc.nextInt();
+	   
+	   int[] 배열1 = new int[배열크기];
+	   
+	   for(int i=0; i<배열1.length; i++) {
+		   System.out.print("입력해보세요.");
+	       배열1[i] = sc.nextInt();
+	   }
+	    System.out.print("정렬 전: ");
+       for(int i=0; i<배열1.length; i++) {
+    	   System.out.print(" "+배열1[i]);
+       }
+     System.out.println();
+       // { 5, 99, 2}
+       // [0] [1] [2]
+       // i <- 여기가 제일 작은놈의 위치
+      int min;
+      int temp;
+      // 가장 작은 놈을 찾기 -> 배열 한바퀴 돈다.
+      for(int i=0; i<배열1.length; i++) { //i=0
+    	  min = i; //min = 배열1[0] =5
+    	  for(int j=i+1; j<배열1.length; j++) { // j=1 j=2 j=3
+    		  if(배열1[min] > 배열1[j]) { // 5 > 99 (거짓) 5 > 2 (참)
+    			  min = j; //min = 2
+    		  }
+    	  }  
+    // 교환 작업
+       temp = 배열1[i];
+       배열1[i] = 배열1[min];
+       배열1[min] = temp;
+      
+        System.out.print("정렬 후: ");
+
+        for(int k=0; k<배열1.length; k++) {
+       	 System.out.print(" "+배열1[k]);
+        }
+        System.out.println();
+        		
+        		
+        		
+      }
+      
+       
+       
+	
+	
+	
+	
+	}
+
+}
