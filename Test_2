@@ -1,0 +1,28 @@
+package kjh2023;
+
+import java.util.Scanner;
+
+public class Test_2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		// 시작-1, 마지막-99, 증가값-2
+		System.out.print("start?:");
+		int 시작 = sc.nextInt();
+		
+		System.out.print("last?:");
+		int 마지막 = sc.nextInt();
+		
+		System.out.print("value change?:");
+		int 증가값 = sc.nextInt();
+		
+		int sum = 0;
+		
+		for(int i=시작; i<=마지막; i+=증가값) {
+			sum = sum + i;
+		}
+		System.out.println(sum);
+	}
+
+}
