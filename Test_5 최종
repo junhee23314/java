@@ -1,0 +1,34 @@
+package kjh20230517;
+
+import java.util.Scanner;
+
+public class kjh0517 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+        int num;
+        int 박수 = 0;
+		int 언제까지 = sc.nextInt();
+		// 1~40까지 진행한다. for문
+        for(int i=1; i<=언제까지; i++) {
+        
+        num = i;
+       
+       
+        while(true) {
+            System.out.println(num);
+            if(num%10==3 || num%10==6 || num%10==9) {
+                System.out.println(num+": 짝");
+                박수++;
+            }
+            num = num / 10;
+            if(num==0) {
+                break;
+            }
+          }
+       }
+        // 총 박수 횟수 출력하기
+        //System.out.println("1~"+언제까지+"까지의 총 박수:"+박수);
+        System.out.printf("1~%d까지의 총 박수: %d",언제까지,박수);
+	}
+}
