@@ -1,0 +1,34 @@
+package kjh0523;
+
+import java.util.Scanner;
+
+public class Sum {
+
+	public static void main(String[] args) {
+		// 숫자 입력받아서 1부터 홀수끼리 더하고 짝수끼리 더하기
+		Scanner sc = new Scanner(System.in);
+		
+		int evenSum = 0;
+		int oddSum = 0;
+		System.out.println("숫자?");
+		int num = sc.nextInt();
+		
+		for(int i=1; i<=num; i++) {
+	   
+	    if(i%2==0) {
+		evenSum = evenSum + i;
+		
+	 } else if(i%2==1) {
+		oddSum += i;
+	 }
+	 	}
+		System.out.println("짝수합:"+evenSum);
+		System.out.println("홀수 합:"+oddSum);
+		
+		
+	
+	
+	
+	}
+
+}
