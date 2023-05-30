@@ -1,0 +1,32 @@
+package kjh0530;
+
+public class Ticketing {
+
+	public static void main(String[] args) {
+		//  영화관 예매하기
+        //  2차원 배열 -> □,■
+		String[][] 좌석 = new String[20][20];
+		
+		System.out.println(좌석[0].length);
+		System.out.println(좌석.length);
+		
+		for(int i=0; i<좌석.length; i++) {
+			for(int j=0; j<좌석[i].length; j++) {
+				좌석[i][j] = "□";
+			}
+		  
+		}
+		
+		
+		for(int i=0; i<좌석.length; i++) {
+			for(int j=0; j<좌석[i].length; j++) {
+				System.out.print(좌석[i][j]+"\t");
+			}
+		  System.out.println();
+		}
+		
+	
+	
+	}
+
+}
