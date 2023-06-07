@@ -1,0 +1,135 @@
+package kjh0607;
+
+import java.util.Scanner;
+import java.util.concurrent.SynchronousQueue;
+
+public class Cnema {
+
+	public static void main(String[] args) {
+		
+		// 영화관 예매 프로그램
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("\r\n" + 
+				"                                                                                                                                                                                                                                                               \r\n" + 
+				"                                                                                                                                                                                                                                                               \r\n" + 
+				"   SSSSSSSSSSSSSSS UUUUUUUU     UUUUUUUUNNNNNNNN        NNNNNNNN        GGGGGGGGGGGGGIIIIIIIIIILLLLLLLLLLL                          CCCCCCCCCCCCCNNNNNNNN        NNNNNNNNEEEEEEEEEEEEEEEEEEEEEEMMMMMMMM               MMMMMMMM               AAA               \r\n" + 
+				" SS:::::::::::::::SU::::::U     U::::::UN:::::::N       N::::::N     GGG::::::::::::GI::::::::IL:::::::::L                       CCC::::::::::::CN:::::::N       N::::::NE::::::::::::::::::::EM:::::::M             M:::::::M              A:::A              \r\n" + 
+				"S:::::SSSSSS::::::SU::::::U     U::::::UN::::::::N      N::::::N   GG:::::::::::::::GI::::::::IL:::::::::L                     CC:::::::::::::::CN::::::::N      N::::::NE::::::::::::::::::::EM::::::::M           M::::::::M             A:::::A             \r\n" + 
+				"S:::::S     SSSSSSSUU:::::U     U:::::UUN:::::::::N     N::::::N  G:::::GGGGGGGG::::GII::::::IILL:::::::LL                    C:::::CCCCCCCC::::CN:::::::::N     N::::::NEE::::::EEEEEEEEE::::EM:::::::::M         M:::::::::M            A:::::::A            \r\n" + 
+				"S:::::S             U:::::U     U:::::U N::::::::::N    N::::::N G:::::G       GGGGGG  I::::I    L:::::L                     C:::::C       CCCCCCN::::::::::N    N::::::N  E:::::E       EEEEEEM::::::::::M       M::::::::::M           A:::::::::A           \r\n" + 
+				"S:::::S             U:::::D     D:::::U N:::::::::::N   N::::::NG:::::G                I::::I    L:::::L                    C:::::C              N:::::::::::N   N::::::N  E:::::E             M:::::::::::M     M:::::::::::M          A:::::A:::::A          \r\n" + 
+				" S::::SSSS          U:::::D     D:::::U N:::::::N::::N  N::::::NG:::::G                I::::I    L:::::L                    C:::::C              N:::::::N::::N  N::::::N  E::::::EEEEEEEEEE   M:::::::M::::M   M::::M:::::::M         A:::::A A:::::A         \r\n" + 
+				"  SS::::::SSSSS     U:::::D     D:::::U N::::::N N::::N N::::::NG:::::G    GGGGGGGGGG  I::::I    L:::::L                    C:::::C              N::::::N N::::N N::::::N  E:::::::::::::::E   M::::::M M::::M M::::M M::::::M        A:::::A   A:::::A        \r\n" + 
+				"    SSS::::::::SS   U:::::D     D:::::U N::::::N  N::::N:::::::NG:::::G    G::::::::G  I::::I    L:::::L                    C:::::C              N::::::N  N::::N:::::::N  E:::::::::::::::E   M::::::M  M::::M::::M  M::::::M       A:::::A     A:::::A       \r\n" + 
+				"       SSSSSS::::S  U:::::D     D:::::U N::::::N   N:::::::::::NG:::::G    GGGGG::::G  I::::I    L:::::L                    C:::::C              N::::::N   N:::::::::::N  E::::::EEEEEEEEEE   M::::::M   M:::::::M   M::::::M      A:::::AAAAAAAAA:::::A      \r\n" + 
+				"            S:::::S U:::::D     D:::::U N::::::N    N::::::::::NG:::::G        G::::G  I::::I    L:::::L                    C:::::C              N::::::N    N::::::::::N  E:::::E             M::::::M    M:::::M    M::::::M     A:::::::::::::::::::::A     \r\n" + 
+				"            S:::::S U::::::U   U::::::U N::::::N     N:::::::::N G:::::G       G::::G  I::::I    L:::::L         LLLLLL      C:::::C       CCCCCCN::::::N     N:::::::::N  E:::::E       EEEEEEM::::::M     MMMMM     M::::::M    A:::::AAAAAAAAAAAAA:::::A    \r\n" + 
+				"SSSSSSS     S:::::S U:::::::UUU:::::::U N::::::N      N::::::::N  G:::::GGGGGGGG::::GII::::::IILL:::::::LLLLLLLLL:::::L       C:::::CCCCCCCC::::CN::::::N      N::::::::NEE::::::EEEEEEEE:::::EM::::::M               M::::::M   A:::::A             A:::::A   \r\n" + 
+				"S::::::SSSSSS:::::S  UU:::::::::::::UU  N::::::N       N:::::::N   GG:::::::::::::::GI::::::::IL::::::::::::::::::::::L        CC:::::::::::::::CN::::::N       N:::::::NE::::::::::::::::::::EM::::::M               M::::::M  A:::::A               A:::::A  \r\n" + 
+				"S:::::::::::::::SS     UU:::::::::UU    N::::::N        N::::::N     GGG::::::GGG:::GI::::::::IL::::::::::::::::::::::L          CCC::::::::::::CN::::::N        N::::::NE::::::::::::::::::::EM::::::M               M::::::M A:::::A                 A:::::A \r\n" + 
+				" SSSSSSSSSSSSSSS         UUUUUUUUU      NNNNNNNN         NNNNNNN        GGGGGG   GGGGIIIIIIIIIILLLLLLLLLLLLLLLLLLLLLLLL             CCCCCCCCCCCCCNNNNNNNN         NNNNNNNEEEEEEEEEEEEEEEEEEEEEEMMMMMMMM               MMMMMMMMAAAAAAA                   AAAAAAA\r\n" + 
+				"                                                                                                                                                                                                                                                               \r\n" + 
+				"                                                                                                                                                                                                                                                               \r\n" + 
+				"                                                                                                                                                                                                                                                               \r\n" + 
+				"                                                                                                                                                                                                                                                               \r\n" + 
+				"                                                                                                                                                                                                                                                               \r\n" + 
+				"                                                                                                                                                                                                                                                               \r\n" + 
+				"                                                                                                                                                                                                                                                               \r\n" + 
+				"");
+		
+		 String[][] 자리 = new String[5][5];
+
+		while(true) {
+			 System.out.println("남은 좌석 확인(1) / 좌석 예매하기(2) / 예매 확인하기(3) / 종료하기(4)");
+			 
+			 int who = sc.nextInt();
+			 
+			 switch (who) {
+			 case 1 :
+				 // 1. 남은 좌석 보기
+			     System.out.println("***** 좌석 확인하기 *****");
+			    
+			     for(int i=0; i<자리.length; i++) {
+			    	 for(int j=0; j<자리.length; j++) {
+			    //System.out.printf("%s", 자리[i][j]);
+			    		 if(자리[i][j] == null) {
+			    			 System.out.printf("□  ");
+			    		 } else {
+			    			 System.out.printf("■  ");
+			    		 }
+			    	 }
+			      System.out.println();
+			     }
+			     
+			     System.out.println("*********************");
+			     System.out.println();
+			     break;
+			 case 2 :
+				 // 2. 좌석 예매하기
+				 System.out.println("***** 좌석 예매하기 *****");
+				 System.out.print("몇 행?");
+			     int row = sc.nextInt();
+				 System.out.print("몇 열?");
+			     int col = sc.nextInt();
+				 
+			     if((row>=0 && row<5) && (col>=0 && col<5)) {
+			    	 System.out.print("이름?");
+			    	 String name = sc.next();
+			    	 
+			    	 if(자리[row][col] == null) {
+			    		 자리[row][col] = name;
+			    		 System.out.println("예매가 완료되었습니다.");
+			    	 } else {
+			    		 System.out.println("이미 선택된 좌석입니다. 다시 시도해주세요");
+			    	 }
+			    	 
+			    	 
+			     } else {
+			    	 System.out.println("다시 입력해주세요.");
+			     }
+				 
+				 System.out.println("*********************");
+				 System.out.println();
+				 break;
+			 case 3 :
+				 // 3. 예매 확인하기
+				 System.out.println("***** 예매 확인하기 *****");
+				 System.out.print("예약자 성명?");
+				 String 예약자 = sc.next();
+				 
+
+			     for(int i=0; i<자리.length; i++) {
+			    	 for(int j=0; j<자리.length; j++) {
+			    		 if(자리[i][j] == 예약자) {
+			    			 System.out.println("좌석은 "+i+" 행 "+j+" 열 입니다.");
+			    		 } else {
+			    			 System.out.println("예약내역이 존재하지 않습니다.");
+			    		 }
+			    	 }
+			     
+			     }
+			     
+			     System.out.println("*********************");
+			     System.out.println();
+			
+				 break;
+			 case 4 :
+				 // 4. 종료하기
+				 System.out.println("***** 프로그램을 종료 *****");
+				 System.exit(0);
+				 
+				 break;
+			 default :
+				 System.out.println("***** 오류입니다. 다시 입력하세요. *****");
+				 
+			 
+				 
+				 
+		 }
+		 
+		 }
+		
+	}
+
+}
