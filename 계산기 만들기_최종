@@ -1,0 +1,67 @@
+package kjh0621;
+
+import java.util.Scanner;
+
+public class Calc {
+
+	public static void main(String[] args) {
+		 // 두 수를 입력받아서
+        Scanner sc = new Scanner(System.in);
+        int num1, num2;
+
+        System.out.print("num1?");
+        num1 = sc.nextInt();
+        System.out.print("num2?");
+        num2 = sc.nextInt();
+       
+        // 사칙연산을 선택하게끔
+        System.out.print("+(1) -(2) *(3) /(4)");
+        int op = sc.nextInt();        
+        double result = 0;
+       
+        // 계산 결과를 출력
+        switch(op) {
+        case 1:
+        	result = add(num1, num2);
+            break;
+        case 2:
+            result = minus(num1, num2);
+            break;
+        case 3:
+            result = multi(num1, num2);
+            break;
+        case 4:
+            // 더블 = 인트/인트
+            result = div(num1,num2);
+            break;
+        default:
+            System.out.print("다시하세요.");        
+        }
+        System.out.println("결과: "+result);
+    }
+    // add(num1, num2)
+   
+	//        -> 매개변수(parameter)
+    static int add(int 숫자1, int 숫자2) {
+    	int 결과 = 숫자1+숫자2;
+        return 결과;
+    }
+    static int minus(int 숫자1, int 숫자2) {
+    	int 결과 = 숫자1-숫자2;
+        return 결과;
+    }
+    static int multi(int 숫자1, int 숫자2) {
+    	int 결과 = 숫자1*숫자2;
+        return 결과;
+    }
+    static float div(float 숫자1, float 숫자2) {
+    	float 결과 = 숫자1/숫자2;
+        return 결과;
+    }
+   
+   
+   
+   
+   
+   
+}
