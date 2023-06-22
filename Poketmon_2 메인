@@ -1,0 +1,20 @@
+package kjh0622;
+
+import java.util.Scanner;
+
+public class Game {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+//		Poketmon p1 = Poketmon();
+//		Poketmon = "그냥몬"
+		Poketmon p1= new Poketmon("그냥몬");
+		System.out.println(p1.pno+":"+p1.name);
+		Poketmon p2= new Poketmon();
+		System.out.println(p2.pno+":"+p2.name);
+		Poketmon p3= new Poketmon();
+	    System.out.println(p3.pno+":"+p3.name);
+	
+	}
+
+}
