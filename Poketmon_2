@@ -1,0 +1,34 @@
+package kjh0622;
+
+public class Poketmon {
+  
+	int pno = 0;
+	int level = 1;  // 속성
+	int hp = 50;
+	int atk = 10;
+	String name;
+
+    Poketmon(){
+    	pno++;
+    	name ="포켓몬"+pno;
+    }
+	
+    Poketmon(String name){
+    	pno++;
+    	this.name = name;
+    	
+    }
+  
+	void 레벨업() {   // 기능
+	 level++;
+	 hp+=10;
+	 atk+=2;
+			
+}
+  void 공격() {
+	System.out.println(name+"이 공격합니다");
+}
+
+
+
+}
