@@ -1,0 +1,25 @@
+package kjh0711;
+
+public class _2 {
+
+	public static void main(String[] args) {
+	int Even합 = 0;
+	int Odd합 = 0;
+	
+		
+		for(int i=1; i<=999; i++) {
+	    //i가 1부터 999까지 1씩 반복하면서 수행
+	  if(i%2 == 0) {
+		  Even합 = Even합 + i;
+        //Even합+=i
+	  }else {
+		  Odd합 = Odd합 + i;
+	  }
+		}
+System.out.println("짝수합:  "+Even합+", 홉수합:  "+Odd합);	
+	
+	
+	
+	}
+
+}
