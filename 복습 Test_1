@@ -1,0 +1,41 @@
+package kjh0711;
+
+import java.util.Scanner;
+
+public class Bmi {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		float height;
+		float weight;
+		float bmi;
+		
+		System.out.print("키?");
+	    height = sc.nextFloat();
+	
+	    System.out.print("몸무게?");
+	    weight = sc.nextFloat();
+	    
+	    bmi = weight / ( height * height );
+	    
+	    if(bmi < 18.5) {
+	    	System.out.println("키:"+height+",  몸무게:"+weight+"  - 저체중");
+	    	
+	    }else if (bmi < 24.9) {
+	    	System.out.println("키:"+height+",  몸무게:"+weight+"  - 건강");
+	    	
+	    }else if (bmi < 29.9) {
+	    	System.out.println("키:"+height+",  몸무게:"+weight+"  - 과체중");
+	    	
+	    }else {
+	    	System.out.println("키:"+height+",  몸무게:"+weight+"  - 비만");
+	    	
+	    }
+	
+	
+	
+	
+	
+	}
+
+}
