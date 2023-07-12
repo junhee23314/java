@@ -1,0 +1,26 @@
+package kjh0712;
+
+import java.util.Scanner;
+
+public class K2 {
+
+	public static void main(String[] args) {
+	// 입력받은 수만큼 성적을 입력, 총점과 평균을 출력해
+		Scanner sc = new Scanner(System.in);
+		System.out.println("몇명?");
+		int 몇명 = sc.nextInt();
+		int score;
+	    int sum = 0;
+		
+	    for(int i=0; i<몇명; i++) {
+			score = sc.nextInt();
+		
+		sum = sum + score;
+		
+		}
+	
+	System.out.println(몇명+"명의 총점은 "+sum+"이고, 평균은 "+(float)sum/몇명);
+	
+	}
+
+}
