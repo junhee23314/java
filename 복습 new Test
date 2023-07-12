@@ -1,0 +1,19 @@
+package kjh0712;
+
+import java.util.Scanner;
+
+public class K1 {
+
+	public static void main(String[] args) {
+		// 1~9 중 번호를 입력받을 경우 그 번호 구구단이 출력되게
+		Scanner sc = new Scanner(System.in);
+		
+		int dan = sc.nextInt();
+		// 몇단인지 입력
+		for (int i = 1; i < 10; i++) {
+			System.out.println();
+		}
+		
+	}
+
+}
