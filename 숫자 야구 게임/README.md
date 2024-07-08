@@ -46,5 +46,74 @@ do {
 - x, y, z는 서로 다른 세 개의 숫자로, 1에서 9 사이의 값을 가집니다.
 - r.nextInt() % 9는 0에서 8 사이의 숫자를 생성하며, 여기에 1을 더하여 1부터 9 사이의 값을 만듭니다.
 - do-while 루프는 y와 z가 앞선 숫자와 같지 않도록 보장합니다.
+---
+  **2.** java
+  ```
+  do {
+    System.out.println("\n카운트: " + count);
+    BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+    String user;
 
+    System.out.print("1번째 숫자: ");
+    user = in.readLine();
+    usr[0] = new Integer(user).intValue();
+
+    System.out.print("2번째 숫자: ");
+    user = in.readLine();
+    usr[1] = new Integer(user).intValue();
+
+    System.out.print("3번째 숫자: ");
+    user = in.readLine();
+    usr[2] = new Integer(user).intValue();
+
+    if ((usr[0] == 0) || (usr[1] == 0) || (usr[2] == 0)) {
+        System.out.println("0은 입력하지 마세요. 다시 입력해주세요.");
+    } else if ((usr[0] > 9) || (usr[1] > 9) || (usr[2] > 9)) {
+        System.out.println("1부터 9까지의 숫자 중 하나를 입력해주세요. 다시 입력해주세요.");
+    } else if ((usr[0] == usr[1]) || (usr[1] == usr[2]) || (usr[0] == usr[2])) {
+        System.out.println("모두 다른 숫자를 입력해주세요. 다시 입력해주세요.");
+    }
+  } while ((usr[0] == 0) || (usr[1] == 0) || (usr[2] == 0) ||
+         (usr[0] > 9) || (usr[1] > 9) || (usr[2] > 9) ||
+         (usr[0] == usr[1]) || (usr[1] == usr[2]) || (usr[0] == usr[2]));
+
+  ```
+**게임 시작 및 사용자 입력 검증:**
+사용자로부터 세 개의 숫자를 입력받고, 입력된 숫자가 유효한지 검증합니다.
+
+- 사용자로부터 세 개의 숫자를 입력받습니다.
+- 입력된 숫자가 0이 아니고, 1에서 9 사이의 숫자이며, 중복되지 않았는지 검증합니다.
+- 유효하지 않은 입력이 들어오면 오류 메시지를 출력하고 다시 입력받습니다.
+---
+**3.** java
+```
+public static void main (String[] args) throws IOException {
+    int result;
+    if (args.length == 3) {
+        int x = Integer.valueOf(args[0]).intValue();
+        int y = Integer.valueOf(args[1]).intValue();
+        int z = Integer.valueOf(args[2]).intValue();
+        result = playGame(x, y, z);
+    } else {
+        result= playGame();
+    }
+    System.out.println();
+    if (result >= 2) {
+        System.out.println("참 잘했어요!");
+    } else if (result >= 5) {
+        System.out.println("잘했어요!");
+    } else if (result >= 9) {
+        System.out.println("보통이네요!");
+    } else {
+        System.out.println("분발하세요!");
+    }
+}
+
+```
+**게임 결과 출력:**
+게임이 종료되면 시도 횟수에 따라 결과를 출력합니다.
+
+- 사용자가 세 개의 숫자를 인자로 입력하면 해당 숫자로 게임을 시작합니다.
+- 인자가 없으면 랜덤 숫자로 게임을 시작합니다.
+- 시도 횟수에 따라 "참 잘했어요!", "잘했어요!", "보통이네요!", "분발하세요!" 등의 메시지를 출력합니다.
 
