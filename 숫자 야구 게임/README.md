@@ -2,7 +2,7 @@
 # [숫자 야구 게임⚾]
 
 ### 게임설명: 
-![숫자야구게임_1](https://github.com/junhee23314/numbers-baseball-game/blob/main/%EC%88%AB%EC%9E%90%EC%95%BC%EA%B5%AC%EA%B2%8C%EC%9E%84%EC%9D%B4%EB%AF%B8%EC%A7%80_1.png)
+![숫자야구게임_1](https://github.com/junhee23314/java/blob/main/%EC%88%AB%EC%9E%90%20%EC%95%BC%EA%B5%AC%20%EA%B2%8C%EC%9E%84/%EC%88%AB%EC%9E%90%EC%95%BC%EA%B5%AC%EA%B2%8C%EC%9E%84%EC%9D%B4%EB%AF%B8%EC%A7%80_1.png)
 
 컴퓨터가 랜덤으로 생성한 세 개의 숫자를 사용자가 맞추는 것입니다. 각 숫자는 1부터 9까지의 범위에 있으며, 중복되지 않습니다. 
 스트라이크와 볼의 수를 통해 피드백을 받습니다. 사용자는 숫자와 위치를 맞추는 게임입니다.
